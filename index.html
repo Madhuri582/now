@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border: 1px solid black;
+        }
+
+        .hidden *{
+            border: none !important;
+            border-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="radio" name="tableDisplay" id="display" onclick="displayTableBorders()"> <label for="display">Display</label>
+    <input type="radio" name="tableDisplay" id="hide" onclick="hideTableBorders()" checked> <label for="hide">Hide</label>
+
+    <br><br>
+
+    <table id="myTable" class="hidden">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>Row 1 </td>
+            <td>Row 1 </td>
+            <td>Row 1 </td>
+        </tr>
+        <tr>
+            <td>Row 2 </td>
+            <td>Row 2 </td>
+            <td>Row 2 </td>
+        </tr>
+        <tr>
+            <td>Row 3 </td>
+            <td>Row 3 </td>
+            <td>Row 3 </td>
+        </tr>
+    </table>
+
+    <script>
+        function displayTableBorders() {
+            let table = document.getElementById("myTable");
+            table.classList.remove("hidden");
+        }
+
+        function hideTableBorders() {
+            let table = document.getElementById("myTable");
+            console.log(table);
+            table.classList.add("hidden");
+        }
+    </script>
+
+</body>
+
+</html>
